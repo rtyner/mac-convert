@@ -5,3 +5,6 @@
 * `sudo pip3 install netaddr`
 * Download `mac_convert.py`
 * Navigate to where you downloaded the file and issue `python3 mac_convert.py`
+
+##### Windows 10
+* Just install Bash, it's a pain to set all this up on Windows.
