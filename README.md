@@ -11,5 +11,5 @@
 
 
 #### TODO
-* Implement the ability to perorm this operation on a file of MAC addresses
-* Ideally you would run `mac_convert.py FILE` and it will prompt for what format you want to convert to.
+* Implement the ability to perform this operation on a file of MAC addresses
+* Ideally you would run `mac_convert.py FILE` and it will prompt for what format you want to convert to
