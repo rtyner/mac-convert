@@ -8,3 +8,8 @@
 
 ##### Windows 10
 * Just install Bash, it's a pain to set all this up on Windows.
+
+
+#### TODO
+* Implement the ability to perorm this operation on a file of MAC addresses
+* Ideally you would run `mac_convert.py FILE` and it will prompt for what format you want to convert to.
