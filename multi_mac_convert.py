@@ -12,8 +12,7 @@ with open(in_file,'r') as i:
     lines = i.readlines()
 
 in_mac = lines
-print(in_mac[0])
-
+# need to have this loop through the entire list - also need to prompt for what type of MAC you want to convert to.
 mac = EUI(in_mac[0])
 print(mac)
 
