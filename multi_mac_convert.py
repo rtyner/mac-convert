@@ -1,3 +1,10 @@
+# Rusty Tyner
+# 7/10/18
+# Take MAC address file as input and convert to different formats
+
+# TODO:
+# Loop through input file, output to csv, prompt for MAC type to convert to
+
 import sys
 import netaddr
 from netaddr import EUI
@@ -12,7 +19,7 @@ with open(in_file,'r') as i:
     lines = i.readlines()
 
 in_mac = lines
-# need to have this loop through the entire list - also need to prompt for what type of MAC you want to convert to.
+
 mac = EUI(in_mac[1])
 print(mac)
 
