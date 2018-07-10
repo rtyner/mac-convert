@@ -13,7 +13,7 @@ with open(in_file,'r') as i:
 
 in_mac = lines
 # need to have this loop through the entire list - also need to prompt for what type of MAC you want to convert to.
-mac = EUI(in_mac[0])
+mac = EUI(in_mac[1])
 print(mac)
 
 mac.dialect = netaddr.mac_cisco
