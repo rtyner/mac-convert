@@ -12,4 +12,7 @@
 
 #### TODO
 * Implement the ability to perform this operation on a file of MAC addresses
-* Ideally you would run `mac_convert.py FILE` and it will prompt for what format you want to convert to
+* Write a real Windows installation guide
+* Possibly figure out a way to package the required libraries, or just requirements.txt
+* Need a way for user to specify what format they want to convert to, and only convert to that format.
+* Output to .csv
