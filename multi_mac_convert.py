@@ -23,7 +23,7 @@ with open(in_file,'r') as i:
     for line in lines:
         #print(line, end="")
         mac = EUI(line)
-        print(line, end="")
+        print(line)
 # in this code block the list is being read with \n at the end of each line, need to remove that.
 # netaddr.core.AddrFormatError: failed to detect EUI version: '13:1B:E5:CC:E6:B3    \n'
 
