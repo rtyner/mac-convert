@@ -36,4 +36,3 @@ with open(in_file,'r') as i: # open and read file
         
         mac.dialect = netaddr.mac_eui48
         print(mac) 
-
