@@ -8,31 +8,28 @@ import sys
 import netaddr
 from netaddr import EUI
 
-# take certain input here, and be able to act on it. 
-# if mac_type == 'Cisco':
-#   print(netaddr.mac_cisco) - something like that, not sure on the syntax yet
-mac_type = input("What format is the input file? Cisco, Bare, Unix, or ")
-
 # take file as input
 in_file = sys.argv[1]
 
 def convert_mac(octet):
     return EUI(netaddr.strategy.eui48.packed_to_int(octet))
 
+# take input here to act on later
+mac_type = input("What format do you want to convert to? Bare, Cisco, EUI48, or Unix: ")
+
 with open(in_file,'r') as i: # open and read file
     lines = i.readlines()
     for line in lines:
         mac = EUI(line)
-        
-        # would like to devise a way to clean up and condense this block below
-        mac.dialect = netaddr.mac_bare
-        print(mac) 
-
-        mac.dialect = netaddr.mac_cisco
-        print(mac) 
-
-        mac.dialect = netaddr.mac_unix_expanded
-        print(mac) 
-        
-        mac.dialect = netaddr.mac_eui48
-        print(mac) 
+        if mac_type == str('Cisco'):
+            mac.dialect = netaddr.mac_cisco
+            print(mac) 
+        elif mac_type == str('Bare'):
+            mac.dialect = netaddr.mac_bare
+            print(mac)
+        elif mac_type == str('Unix'):
+            mac.dialect = netaddr.mac_unix_expanded
+            print(mac)
+        elif mac_type == str('EUI48'):
+            mac.dialect = netaddr.mac_eui48
+            print(mac)
