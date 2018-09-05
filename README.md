@@ -1,19 +1,17 @@
 # Dirty MAC Converter
-test
+
 #### Python script to convert a MAC to different formats
+
+##### Types of MAC addresses that this program has been tested with:
+* EUI48 - 71-54-ED-69-9B-E9
+* Unix - 71:54:ed:69:9b:e9
+* Cisco - 7154.ed69.9be9
+* Bare - 7154ED699BE9
+
 ##### Ubuntu/Bash on Windows 10
-* `sudo apt install python3 python3-pip`
-* `sudo pip3 install netaddr`
-* Download `mac_convert.py`
-* Navigate to where you downloaded the file and issue `python3 mac_convert.py`
-
-##### Windows 10
-* Just install Bash, it's a pain to set all this up on Windows.
-
-
-#### TODO
-* Implement the ability to perform this operation on a file of MAC addresses
-* Write a real Windows installation guide
-* Possibly figure out a way to package the required libraries, or just requirements.txt
-* Need a way for user to specify what format they want to convert to, and only convert to that format.
-* Output to .csv
+* ````
+  sudo apt install python3 python3-pip
+  sudo pip3 install netaddr
+  ````
+* Clone the repo and give the script a file as the argument
+  * `python3 multi_mac_convert.py macs.txt`
