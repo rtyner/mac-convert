@@ -14,4 +14,4 @@
   sudo pip3 install netaddr
   ````
 * Clone the repo and give the script a file as the argument
-  * `python3 multi_mac_convert.py macs.txt`
+  * `python3 mac_convert.py macs.txt`
