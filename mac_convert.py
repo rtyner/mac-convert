@@ -4,6 +4,10 @@
 # cisco - 7154.ed69.9be9
 # bare - 7154ED699BE9
 
+# TODO 
+# take csv as input, output as csv as well
+# flask web app
+
 import sys
 import netaddr
 from netaddr import EUI
@@ -15,7 +19,7 @@ def convert_mac(octet):
     return EUI(netaddr.strategy.eui48.packed_to_int(octet))
 
 # take input here to act on later
-mac_type = input("What format do you want to convert to? Bare, Cisco, EUI48, or Unix: ")
+mac_type = input("Wha do you want to convert to? Bare, Cisco, EUI48, or Unix: ")
 
 with open(in_file,'r') as i: # open and read file
     lines = i.readlines()
@@ -23,7 +27,7 @@ with open(in_file,'r') as i: # open and read file
         mac = EUI(line)
         if mac_type == str('Cisco'):
             mac.dialect = netaddr.mac_cisco
-            print(mac) 
+            print(mac)
         elif mac_type == str('Bare'):
             mac.dialect = netaddr.mac_bare
             print(mac)
