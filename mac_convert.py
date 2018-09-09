@@ -38,3 +38,6 @@ with open(in_file,'r') as i: # open and read file
         elif mac_type == 'eui48':
             mac.dialect = netaddr.mac_eui48
             print(mac)
+        else:
+            print("Your input is not recognized. This is probably due to "
+                    "inputting the incorrect MAC type or a typo.")
