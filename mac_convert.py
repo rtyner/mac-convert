@@ -19,21 +19,22 @@ def convert_mac(octet):
     return EUI(netaddr.strategy.eui48.packed_to_int(octet))
 
 # take input here to act on later
-mac_type = input("Wha do you want to convert to? Bare, Cisco, EUI48, or Unix: ")
+mac_type = input("What do you want to convert to? Bare, Cisco, EUI48, or Unix: "
+        ).lower()
 
 with open(in_file,'r') as i: # open and read file
     lines = i.readlines()
     for line in lines:
         mac = EUI(line)
-        if mac_type == str('Cisco'):
+        if mac_type == 'cisco':
             mac.dialect = netaddr.mac_cisco
             print(mac)
-        elif mac_type == str('Bare'):
+        elif mac_type == 'bare':
             mac.dialect = netaddr.mac_bare
             print(mac)
-        elif mac_type == str('Unix'):
+        elif mac_type == 'unix':
             mac.dialect = netaddr.mac_unix_expanded
             print(mac)
-        elif mac_type == str('EUI48'):
+        elif mac_type == 'eui48':
             mac.dialect = netaddr.mac_eui48
             print(mac)
