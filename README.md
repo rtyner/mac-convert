@@ -1,4 +1,4 @@
-# Dirty MAC Converter
+# MAC Converter
 
 #### Python script to convert a MAC to different formats
 
