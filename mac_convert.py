@@ -16,8 +16,7 @@ from netaddr import EUI
 in_file = sys.argv[1]
 
 # take input here to act on later
-mac_type = input("What do you want to convert to? Bare, Cisco, EUI48, or Unix: "
-        ).lower()
+mac_type = input("What do you want to convert to? Bare, Cisco, EUI48, or Unix: ").lower()
 
 with open(in_file,'r') as i: # open and read file
     lines = i.readlines()
